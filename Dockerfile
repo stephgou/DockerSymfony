@@ -36,7 +36,6 @@ RUN chmod 755 /*.sh
 WORKDIR /var/www
 RUN git clone https://github.com/JohnStory/KitAzureDiscoveryPhp.git
 WORKDIR /var/www/KitAzureDiscoveryPhp
-COPY app_dev.php web/app_dev.php
 RUN curl -sS https://getcomposer.org/installer | php -- --filename=composer
 RUN php composer install
 COPY parameters.yml app/config/parameters.yml
